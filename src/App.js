@@ -7,12 +7,14 @@ import Register from "./components/Register";
 import Navbar from "./components/Navbar";
 import RequestApplications from "./pages/RequestApplications";
 import AssociationPage from "./pages/Associations";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Router>
         <Navbar />
+        <ToastContainer />
         <div className="container mx-auto p-4">
           <Routes>
             <Route path="/" element={<Home />} />

@@ -2,43 +2,43 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  // State to track if the user is logged in
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Change this based on your auth logic
+  // Kullanıcının giriş yapıp yapmadığını takip etmek için state
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Auth mantığınıza göre bunu değiştirin
 
   return (
     <nav className="bg-white shadow-md">
       <ul className="flex justify-center space-x-4 p-4">
         <li>
           <Link to="/" className="text-blue-500 hover:text-blue-700">
-            Home
+            Ana Sayfa
           </Link>
         </li>
         <li>
           <Link to="/association" className="text-blue-500 hover:text-blue-700">
-            Association
+            Dernek
           </Link>
         </li>
         <li>
           <Link to="/application" className="text-blue-500 hover:text-blue-700">
-            Application
+            Başvuru
           </Link>
         </li>
         <li>
           <Link to="/requests" className="text-blue-500 hover:text-blue-700">
-            Requests
+            Talepler
           </Link>
         </li>
-        {/* Conditionally render Login or Profile */}
+        {/* Giriş yapıldıysa Profil, yapılmadıysa Giriş Yap göster */}
         {isLoggedIn ? (
           <li>
             <Link to="/profile" className="text-blue-500 hover:text-blue-700">
-              Profile
+              Profil
             </Link>
           </li>
         ) : (
           <li>
             <Link to="/login" className="text-blue-500 hover:text-blue-700">
-              Login
+              Giriş Yap
             </Link>
           </li>
         )}
