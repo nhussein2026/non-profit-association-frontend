@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import RequestApplications from "./pages/RequestApplications";
 import AssociationPage from "./pages/Associations";
 import { ToastContainer } from "react-toastify";
+import Talepler from "./pages/Talepler";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/requests" element={<RequestApplications />} />
             <Route path="/association" element={<AssociationPage />} />
-          </Routes>
+            <Route path="/talepler/:id" element={<Talepler />} />
+        </Routes>
         </div>
       </Router>
     </div>

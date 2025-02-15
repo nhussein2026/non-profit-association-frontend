@@ -27,8 +27,11 @@ const Application = () => {
         "http://localhost:5000/applications/basvuru-ekle",
         formData
       );
-
-      // Show success toast
+ // Get the newly generated application ID
+//  const newId = response.data.id;
+       // Successfully received the ID from the response
+       const { message, id } = response.data;
+  // Show success toast
       toast.success(
         "Başvurunuz başarıyla gönderildi! Yönlendiriliyorsunuz...",
         {
@@ -37,9 +40,9 @@ const Application = () => {
         }
       );
 
-      // Redirect to home page after 2 seconds
-      setTimeout(() => {
-        navigate("/");
+       // Redirect to Talepler page with newId as a URL parameter
+       setTimeout(() => {
+        navigate(`/talepler/${id}`);
       }, 2000);
     } catch (error) {
       // Show error toast

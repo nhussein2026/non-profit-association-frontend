@@ -25,7 +25,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/requests" className="text-blue-500 hover:text-blue-700">
-            Talepler
+            Requests
           </Link>
         </li>
         {/* Giriş yapıldıysa Profil, yapılmadıysa Giriş Yap göster */}
